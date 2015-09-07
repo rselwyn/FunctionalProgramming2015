@@ -14,6 +14,7 @@ def problem2():
 def problem3():
     #include processes and inputs
     #here is the added introduction
+    #runs the previous code 5 times, takes in a new input each time
     for i in range(5):
         c = eval(input("celsius Temperature"))
         fahr = (9/5) * c +32
