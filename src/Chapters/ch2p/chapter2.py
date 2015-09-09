@@ -25,14 +25,14 @@ def problem3():
         #output
 def problem4():
     
-    # the loop runs 100 times
-    for i in range(100):
+    # the loop runs 101 times because 100 must be included in the result
+    for i in range(101):
         # i%10 checks to see if the remainder after being divided by 10 is 0, definition of being divisible by 10
         if i%10 == 0:
             #using variable i from before, convert it to fahrenheit
             fahr = (9/5) * i +32
             #output the temperature in F
-            print("The temperature is", fahr, "degrees Fahrenheit")
+            print("The temperature of", i, "in Fahrenheit is", fahr, "degrees Fahrenheit")
         
 def problem5():
     years = eval(input("how many years for the investment"))
