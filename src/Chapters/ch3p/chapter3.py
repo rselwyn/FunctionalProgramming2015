@@ -68,4 +68,12 @@ def problem14():
         x = x + float(input())
     print("The average of the numbers in your series is", x/nums)
 def problem15():
-                  
+    x = int(input("to what precision do you want pi to be calculated to"))
+    mu = 1
+    adder = 1
+    totalp = 0
+    for i in range(x):
+        totalp += mu * (4/adder)
+        mu = mu * (-1)
+        adder+=2
+    print(totalp)                 
