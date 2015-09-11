@@ -60,5 +60,12 @@ def problem13():
     for i in range(nums):
         x = x + float(input())
     print("the total value of your series of numbers is",x)    
-                 
+def problem14():
+    nums = int(input("how many numbers is your series"))
+    x = 0
+    print("please enter each number in your series and press enter")
+    for i in range(nums):
+        x = x + float(input())
+    print("The average of the numbers in your series is", x/nums)
+def problem15():
                   
