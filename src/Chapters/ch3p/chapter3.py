@@ -77,3 +77,17 @@ def problem15():
         mu = mu * (-1)
         adder+=2
     print(totalp)                 
+def problem16():
+    hm = int(input("how many fibonnaci numbers?"))
+    num1 = 0
+    num2 = 1
+    store = 0
+    
+    for i in range(hm):
+        store = num2
+        num2 += num1
+        num1 = store
+        
+    print(num1)
+def problem17():
+    
