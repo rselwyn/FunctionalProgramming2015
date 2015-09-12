@@ -3,7 +3,7 @@ import math
 import os
 def problem1():
     #define pi
-    pi = 3.14159265358979323846264338279502
+    pi = math.pi
     print("This program calculates the volume and surface area of a sphere")
     # get input, float input so no error
     rad = float(input("what is the radius"))
@@ -89,5 +89,3 @@ def problem16():
         num1 = store
         
     print(num1)
-def problem17():
-    
