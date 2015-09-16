@@ -67,17 +67,23 @@ def problem10():
     print(length)
     #print the length of the ladder
 def problem11():
-    x = int(input("how many natural numbers should printed"))
+    #prints natural numbers
+    x = int(input("how many natural numbers should be summed?"))
+    #x is the number of number to be summed
     y = 0
-    for i in range(x):
-        
+    #y is the value where the numbers get accumulated
+    for i in range(x+1):
+        #add one to nuber of iterations because natural numbers don't include zero
+        #add the current number the loop is on to the total
         y = y+ i
+    #print the total    
     print(y)
     
 def problem12():
-    x = int(input("how many natural numbers should printed"))
+    x = int(input("how many cubes of natural numbers do you want to sum"))
     y = 0
-    for i in range(x):
+    #y is the accumulator
+    for i in range(x+1):
         
         y = y+ i**3
     print(y)
