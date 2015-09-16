@@ -17,13 +17,22 @@ def problem4():
     li = input("Time elapsed between lightening flash and thunder")
     print("You are", 1100*li, "ft")
 def problem6():
+    #prints the slope of the line containing both points
+    
     x1,y1 = input("Enter coordinate 1 sperated by commas")
+    #get points 1 and 2
     x2,y2 = input("enter coordinate 2 seperated by commas")
+
+    #print using slope formula (Change in y over change in x)
     print("the slope is", (y2-y1)/(x2-x1))
 def problem7():
+    #get the two coordinates 
     x1,y1 = input("Enter coordinate 1 sperated by commas")
     x2,y2 = input("enter coordinate 2 seperated by commas")
+    #plug into the distance formula
     d = ((y2-y1)**2 + (x2-x1)**2)**(1/2)
+
+    #print
     print("The distance between the coordinates is",d)
 def problem8():
     C = int(input("year"))//100
