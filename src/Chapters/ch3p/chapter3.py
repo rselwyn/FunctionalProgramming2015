@@ -73,6 +73,7 @@ def problem11():
     y = 0
     #y is the value where the numbers get accumulated
     for i in range(x+1):
+        #assuming that the set of natural numbers is (0, infinity) in set notation
         #add one to nuber of iterations because natural numbers don't include zero
         #add the current number the loop is on to the total
         y = y+ i
@@ -84,23 +85,38 @@ def problem12():
     y = 0
     #y is the accumulator
     for i in range(x+1):
-        
+        #assuming that the set of natural numbers is (0, infinity) in set notation
+        #add one because natural numbers dont include zero
+
+        #add the cube of the current number to the total
         y = y+ i**3
+    #print the accumulated value    
     print(y)
 def problem13():
     #this program sums numbers given by a user
-    nums = int(input("how many numbers is your series"))
+    nums = int(input("how many numbers is your series?"))
     x = 0
+    #x is the accumulated value of the sums
     print("please enter each number in your series and press enter")
     for i in range(nums):
+        # get input (nums) times
+
+        #add the input to the accumulator
         x = x + float(input())
-    print("the total value of your series of numbers is",x)    
+    print("the total value of your series of numbers is",x)
+    #print the value of the set
 def problem14():
-    nums = int(input("how many numbers is your series"))
+    nums = int(input("how many numbers are in your series"))
+    #ge the number of numbers in the series
     x = 0
+    #z is accumulator variable
     print("please enter each number in your series and press enter")
     for i in range(nums):
+        #loop iterates (nums) times
+        
+        #add the input to the accumulator
         x = x + float(input())
+        #print the average
     print("The average of the numbers in your series is", x/nums)
 def problem15():
     x = int(input("to what precision do you want pi to be calculated to"))
