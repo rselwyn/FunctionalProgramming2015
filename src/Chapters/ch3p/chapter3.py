@@ -120,13 +120,25 @@ def problem14():
     print("The average of the numbers in your series is", x/nums)
 def problem15():
     x = int(input("to what precision do you want pi to be calculated to"))
+    #get the iterations of the pi calculator
     mu = 1
+    #mu gets set to 1 or -1 that gets multiplied by 4/(a value) because the
+    #formula switches between adding and subtracting
+    
     adder = 1
+    #this increases by 2 each time for the formula
+    
     totalp = 0
+    #totalp is accumulator
     for i in range(x):
         totalp += mu * (4/adder)
+        #add the value to the accumulator
+        
         mu = mu * (-1)
+        #flips mu for the formula
+        
         adder+=2
+        #add 2 to the adder for the formula
     print(totalp)                 
 def problem16():
     hm = int(input("how many fibonnaci numbers?"))
