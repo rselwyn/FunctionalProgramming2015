@@ -35,17 +35,37 @@ def problem7():
     #print
     print("The distance between the coordinates is",d)
 def problem8():
+    #this program has me plug values into the formula in the book
     C = int(input("year"))//100
+    #get the year and int divide it by 100
     year = C*100
+    #create other value
     epact = (8 +(C//4) - C + ((8*C+13)//25) + 11* (year%19))%30
+    #plug in into formula
     print(epact)
-#WRITE PROBLEM 10
+
+#WRITE PROBLEM 9
+def problem9():
+    #get side lengths value
+    a = float(input("enter the value of side 1"))
+    b = float(input("enter the value of side 2"))
+    c = float(input("enter the value of side 3"))
+    #calculate the value of (a+b+c)/2
+    s = (a+b+c)/2
+    #use the formula provided in the book to find the area
+    area = (s*(s-a)*(s-b)*(s-c))**(1/2)
+    print("the area is", area)
+    
 def problem10():
     x = float(input("angle measure"))
+    #get the angle measure formed by the fround and ladder
     h = float(input("enter the height of the house"))
     radians = math.pi/180 * x
+    #convert to radians so we can use math.sin
     length = h/(math.sin(radians))
+    #calculate the length of the ladder using a formula from book
     print(length)
+    #print the length of the ladder
 def problem11():
     x = int(input("how many natural numbers should printed"))
     y = 0
