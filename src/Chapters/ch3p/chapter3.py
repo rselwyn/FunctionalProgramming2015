@@ -141,18 +141,18 @@ def problem15():
         #add 2 to the adder for the formula
     print(totalp)
     #print it out
+
 def problem16():
-    hm = int(input("how many fibonnaci numbers?")
-    #get the number of fibonnaci numbers, cast it to an int because we cant have
-    #a loop iterate 1.23 times
-    num1 = 0
-    
-    num2 = 1
+    hm = int(input("which fibonnaci number do you want to print?"))
+    tnum1 = 0
+    tnum2 = 1
     store = 0
-    
+    #get the number of fibonnaci numbers, cast it to an int because we cant have
+    #a loop iterate 1.23 times    
     for i in range(hm):
-        store = num2
-        num2 += num1
-        num1 = store
-        
-    print(num1)
+        store = tnum2
+        tnum2 += tnum1
+        tnum1 = store        
+    print(tnum1)
+
+
