@@ -145,6 +145,7 @@ def problem16():
     hm = int(input("how many fibonnaci numbers?")
     #get the number of fibonnaci numbers, cast it to an int because we cant have
     #a loop iterate 1.23 times
+
     num1 = 0
     
     num2 = 1
