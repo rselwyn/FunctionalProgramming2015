@@ -123,11 +123,11 @@ def problem15():
     #get the iterations of the pi calculator
     mu = 1
     #mu gets set to 1 or -1 that gets multiplied by 4/(a value) because the
-    #formula switches between adding and subtracting
+    #formula switches between adding and subtracting (see the instructions)
     
     adder = 1
-    #this increases by 2 each time for the formula
-    
+    #this increases by 2 each time for the formula because the number over 4
+    #increases by two each time
     totalp = 0
     #totalp is accumulator
     for i in range(x):
@@ -139,10 +139,14 @@ def problem15():
         
         adder+=2
         #add 2 to the adder for the formula
-    print(totalp)                 
+    print(totalp)
+    #print it out
 def problem16():
-    hm = int(input("how many fibonnaci numbers?"))
+    hm = int(input("how many fibonnaci numbers?")
+    #get the number of fibonnaci numbers, cast it to an int because we cant have
+    #a loop iterate 1.23 times
     num1 = 0
+    
     num2 = 1
     store = 0
     
