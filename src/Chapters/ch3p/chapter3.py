@@ -14,8 +14,8 @@ def problem1():
     print("The volume is", vol, "and the surface area is", sa)
 def problem4():
     #this program prints distance to a lightning strike based on time elapsed
-    li = input("Time elapsed between lightening flash and thunder")
-    print("You are", 1100*li, "ft")
+    li = 1100*int(input("Time elapsed between lightening flash and thunder"))
+    print("You are", li, "ft")
 def problem6():
     #prints the slope of the line containing both points
     
@@ -73,7 +73,9 @@ def problem11():
     y = 0
     #y is the value where the numbers get accumulated
     for i in range(x+1):
-        #assuming that the set of natural numbers is (0, infinity) in set notation
+        #assuming that the set of natural numbers is all integers
+        #(0, infinity) in set notation
+
         #add one to nuber of iterations because natural numbers don't include zero
         #add the current number the loop is on to the total
         y = y+ i
@@ -145,14 +147,19 @@ def problem15():
 def problem16():
     hm = int(input("which fibonnaci number do you want to print?"))
     tnum1 = 0
+    #first number is zero
     tnum2 = 1
+    #second is 1
     store = 0
     #get the number of fibonnaci numbers, cast it to an int because we cant have
     #a loop iterate 1.23 times    
     for i in range(hm):
         store = tnum2
+        #set another value equal to the second number
         tnum2 += tnum1
-        tnum1 = store        
+        #add the previous number to second
+        tnum1 = store
+        #set num1 equal to the previous num2
     print(tnum1)
-
+    #print
 
