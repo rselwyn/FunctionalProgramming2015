@@ -39,7 +39,7 @@ def problem2():
     yellow.draw(win)
 def problem3():
     #draw a face
-    win = graphics.GraphWin("Archery", 400,400)
+    win = graphics.GraphWin("A Face", 400,400)
 
     yellow = graphics.Circle(graphics.Point(200,200),80)
     yellow.setOutline("Black")
@@ -57,5 +57,6 @@ def problem3():
     blue2.setFill("Blue")
     blue2.draw(win)
 
+    mouth = math.Line()
 #    line = graphics.Line(graphics.Point(100,2), graphics.Point(3,2))
 #    line.draw(win)
