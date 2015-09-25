@@ -83,6 +83,14 @@ def problem5():
     bdot.draw(win)
     #add the dot to the dice
 
-    
+    #add dots to dice 2
+    bdot2 = Circle(Point(119.33,75),6)
+    bdot2.setFill("Black")
+    bdot2.draw(win)
+    bdot3 = Circle(Point(141.66,75),6)
+    bdot3.setFill("Black")
+    bdot3.draw(win)
 
+    
+    
     
