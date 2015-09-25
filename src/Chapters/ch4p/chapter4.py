@@ -40,25 +40,31 @@ def problem2():
 def problem3():
     #draw a face
     win = graphics.GraphWin("A Face", 400,400)
+    #create window
 
+    #create Face Background
     yellow = graphics.Circle(graphics.Point(200,200),80)
     yellow.setOutline("Black")
     yellow.setFill("yellow")
     yellow.draw(win)
+    #add it
 
-    
+    #create the eyes
     blue = graphics.Circle(graphics.Point(175, 175),20)
     blue.setOutline("Black")
     blue.setFill("Blue")
     blue.draw(win)
+    #add eye #1
 
     blue2 = graphics.Circle(graphics.Point(225, 175),20)
     blue2.setOutline("Black")
     blue2.setFill("Blue")
     blue2.draw(win)
+    #add eye #2
+    #finished the eyes
 
+    #create the mouth
     mouth = graphics.Rectangle(graphics.Point(150,240),graphics.Point(250,245))
     mouth.setFill("Black")
     mouth.draw(win)
-#    line = graphics.Line(graphics.Point(100,2), graphics.Point(3,2))
-#    line.draw(win)
+    #add it to the window
