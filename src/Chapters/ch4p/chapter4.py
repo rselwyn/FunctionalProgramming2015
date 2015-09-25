@@ -57,6 +57,8 @@ def problem3():
     blue2.setFill("Blue")
     blue2.draw(win)
 
-    mouth = math.Line()
+    mouth = graphics.Rectangle(graphics.Point(150,240),graphics.Point(250,245))
+    mouth.setFill("Black")
+    mouth.draw(win)
 #    line = graphics.Line(graphics.Point(100,2), graphics.Point(3,2))
 #    line.draw(win)
