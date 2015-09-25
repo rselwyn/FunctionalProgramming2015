@@ -90,7 +90,16 @@ def problem5():
     bdot3 = Circle(Point(141.66,75),6)
     bdot3.setFill("Black")
     bdot3.draw(win)
-
     
+    
+    bdot4 = Circle(Point(119.33,75),6)
+    bdot4.setFill("Black")
+    bdot4.draw(win)
+    bdot5 = Circle(Point(141.66,75),6)
+    bdot5.setFill("Black")
+    bdot5.draw(win)
+    bdot6 = Circle(Point(141.66,75),6)
+    bdot6.setFill("Black")
+    bdot6.draw(win)
     
     
