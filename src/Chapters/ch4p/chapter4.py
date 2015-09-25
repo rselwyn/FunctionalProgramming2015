@@ -70,7 +70,7 @@ def problem3():
     #add it to the window
 def problem5():
     
-    win = GraphWin("A Face", 400,400)
+    win = GraphWin("Straight Dice", 400,400)
     for i in range(5):
         mouth = Rectangle(Point(30 + i*75,50),Point(80 +i*75,100))
         mouth.setFill("White")
