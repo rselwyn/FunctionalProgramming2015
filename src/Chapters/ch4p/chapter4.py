@@ -70,7 +70,7 @@ def problem3():
     #add it to the window
 def problem5():
     
-    win = GraphWin("Straight Dice", 400,400)
+    win = GraphWin("Straight Dice", 400,200)
     for i in range(5):
         mouth = Rectangle(Point(30 + i*75,50),Point(80 +i*75,100))
         mouth.setFill("White")
@@ -92,14 +92,43 @@ def problem5():
     bdot3.draw(win)
     
     
-    bdot4 = Circle(Point(119.33,75),6)
+    bdot4 = Circle(Point(119.33+75,85),6)
     bdot4.setFill("Black")
     bdot4.draw(win)
-    bdot5 = Circle(Point(141.66,75),6)
+    bdot5 = Circle(Point(141.66+75,85),6)
     bdot5.setFill("Black")
     bdot5.draw(win)
-    bdot6 = Circle(Point(141.66,75),6)
+    bdot6 = Circle(Point(205.4,65),6)
     bdot6.setFill("Black")
     bdot6.draw(win)
     
-    
+    bdot4 = Circle(Point(119.33+75*2,65),6)
+    bdot4.setFill("Black")
+    bdot4.draw(win)
+    bdot5 = Circle(Point(141.66+75*2,65),6)
+    bdot5.setFill("Black")
+    bdot5.draw(win)
+    bdot4 = Circle(Point(119.33+75*2,85),6)
+    bdot4.setFill("Black")
+    bdot4.draw(win)
+    bdot5 = Circle(Point(141.66+75*2,85),6)
+    bdot5.setFill("Black")
+    bdot5.draw(win)
+
+
+
+    bdot4 = Circle(Point(119.33+75*3 -3,65-3),6)
+    bdot4.setFill("Black")
+    bdot4.draw(win)
+    bdot5 = Circle(Point(141.66+75*3 +3,65-3),6)
+    bdot5.setFill("Black")
+    bdot5.draw(win)
+    bdot4 = Circle(Point(119.33+75*3 -3 ,85+3),6)
+    bdot4.setFill("Black")
+    bdot4.draw(win)
+    bdot5 = Circle(Point(141.66+75*3 +3,85+3),6)
+    bdot5.setFill("Black")
+    bdot5.draw(win)
+    bFINAL =  Circle(Point((119.33+75*3 + 141.66+75*3 )/2 ,85-8),6)
+    bFINAL.setFill("Black")
+    bFINAL.draw(win)
