@@ -132,3 +132,5 @@ def problem5():
     bFINAL =  Circle(Point((119.33+75*3 + 141.66+75*3 )/2 ,85-8),6)
     bFINAL.setFill("Black")
     bFINAL.draw(win)
+
+def problem6():
