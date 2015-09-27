@@ -134,3 +134,13 @@ def problem5():
     bFINAL.draw(win)
 
 def problem6():
+    win = GraphWin("",320,240)
+    principal =100;
+    apr = 1;
+    win.setBackground("white")
+    Text(Point(20,230), '0.0K').draw(win)
+    Text(Point(20,180), '2.5K').draw(win)
+    Text(Point(20,130), '5K').draw(win)
+    Text(Point(20,80), '7.5K').draw(win)
+    Text(Point(20,30), '10K').draw(win)
+    height
