@@ -135,12 +135,29 @@ def problem5():
 
 def problem6():
     win = GraphWin("",320,240)
-    principal =100;
-    apr = 1;
+    principal =1000;
+    apr = .01;
     win.setBackground("white")
     Text(Point(20,230), '0.0K').draw(win)
     Text(Point(20,180), '2.5K').draw(win)
     Text(Point(20,130), '5K').draw(win)
     Text(Point(20,80), '7.5K').draw(win)
     Text(Point(20,30), '10K').draw(win)
-    height
+    
+    height = principal * .02
+
+    bar = Rectangle(Point(40,230), Point(65, 230-height))
+    bar.setFill("Green")
+    bar.setWidth(2)
+    bar.draw(win)
+
+    for year in range(1,11):
+        principal = principal*(1+apr)
+        x11 = year *25 +40
+        height = principal * .02
+        bar = Rectangle(Point(x11,230), Point(x11 +25,230-height))
+        bar.setFill("green")
+        bar.setWidth(2)
+        bar.draw(win)
+    input("press enter to quit")
+    win.close()
