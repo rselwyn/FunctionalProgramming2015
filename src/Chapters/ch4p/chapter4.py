@@ -136,8 +136,12 @@ def problem5():
 def problem6():
     principal = 1000
     apr = .05
-    win = GraphWin("Chart", 320,240)
+    win = GraphWin("Chart", 420,240)
     win.setBackground("white")
+    pin = Entry(Point(300,150),20)
+    aprin = Entry(Point(300,200),20)
+
+    
     Text(Point(20,230), '0.0K').draw(win)
     Text(Point(20,180), '2.5K').draw(win)
     Text(Point(20,130), '5.0K').draw(win)
@@ -156,8 +160,7 @@ def problem6():
         bar.setFill("green")
         bar.setWidth(2)
         bar.draw(win)
-        print("im crashing")
-    
+            
     input("press enter to quit")
     win.close()        
         
