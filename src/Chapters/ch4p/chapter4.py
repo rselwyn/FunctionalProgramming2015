@@ -135,7 +135,7 @@ def problem5():
 
 def problem6():
     win = GraphWin("",320,240)
-    principal =1000;
+    principal =100;
     apr = .01;
     win.setBackground("white")
     Text(Point(20,230), '0.0K').draw(win)
