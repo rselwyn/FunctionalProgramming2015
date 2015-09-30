@@ -1,4 +1,5 @@
 from graphics import *
+import math
 #2,3,5,6,9
 #ec 7, 8, 10, 11
 def test():
@@ -178,4 +179,26 @@ def problem6():
         input("press enter to quit")
         win.close()        
         
+def problem9():
+    win = GraphWin("Give 2 Mouse Clicks", 300, 300)
+    p = win.getMouse()
+    x1,y1 = p.getX(), p.getY()
+    p2 = win.getMouse()
+    x2,y2 = p2.getX(), p2.getY()
+    point1 = Point(x1,y1)
+    point2 = Point(x2,y2)
+    rect = Rectangle(point1,point2)
+    rect.setFill("red")
+    rect.draw(win)
+    height = abs(x1-x2)
+    width = abs(y1-y2)
+    print(2*(width+height))
+    print(height*width)
+    a = "The perimeter is"
+    b = " and the area is "
+    val = "The perimeter is " + str(2*(height + width)) +" and the area is " + str(height*width)
+    Text(Point(150,30), val).draw(win)
+    
+    
+    
     
