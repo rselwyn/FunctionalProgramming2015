@@ -1,4 +1,5 @@
 from graphics import *
+import math
 #2,3,5,6,9
 #ec 7, 8, 10, 11
 def test():
@@ -132,3 +133,72 @@ def problem5():
     bFINAL =  Circle(Point((119.33+75*3 + 141.66+75*3 )/2 ,85-8),6)
     bFINAL.setFill("Black")
     bFINAL.draw(win)
+
+def problem6():
+ #   principal = 1000
+ #   apr = .05
+    correct =1
+    win = GraphWin("Chart", 420,240)
+    win.setBackground("white")
+    pin = Entry(Point(300,50),20)
+    aprin = Entry(Point(300,75),20)
+    pin.draw(win)
+    aprin.draw(win)
+    submit = Rectangle(Point(300,100),Point(320,123))
+    submit.setFill("red")
+    submit.draw(win)
+    win.getMouse()
+    try:
+        principal = float(eval(pin.getText()))
+        apr = float(eval(aprin.getText()))
+        correct = 1
+    except:
+        win.close()
+        correct = 0
+        print("Error: Please type in a valid value --\n You may reinvoke this function with the command problem6()")
+    if correct == 1:
+        Text(Point(20,230), '0.0K').draw(win)
+        Text(Point(20,180), '2.5K').draw(win)
+        Text(Point(20,130), '5.0K').draw(win)
+        Text(Point(20,80), '7.5K').draw(win)
+        Text(Point(20,30), '10.0K').draw(win)
+        height = principal*.02
+        bar = Rectangle(Point(40,230), Point(65,230-height))
+        bar.setFill("green")
+        bar.setWidth(2)
+        bar.draw(win)
+        for year in range(1,11):
+            principal = principal *(1+apr)
+            x11 = year * 25 +40
+            height = principal *.02
+            bar = Rectangle(Point(x11,230), Point(x11+25, 230-height))
+            bar.setFill("green")
+            bar.setWidth(2)
+            bar.draw(win)
+                
+        input("press enter to quit")
+        win.close()        
+        
+def problem9():
+    win = GraphWin("Give 2 Mouse Clicks", 300, 300)
+    p = win.getMouse()
+    x1,y1 = p.getX(), p.getY()
+    p2 = win.getMouse()
+    x2,y2 = p2.getX(), p2.getY()
+    point1 = Point(x1,y1)
+    point2 = Point(x2,y2)
+    rect = Rectangle(point1,point2)
+    rect.setFill("red")
+    rect.draw(win)
+    height = abs(x1-x2)
+    width = abs(y1-y2)
+    print(2*(width+height))
+    print(height*width)
+    a = "The perimeter is"
+    b = " and the area is "
+    val = "The perimeter is " + str(2*(height + width)) +" and the area is " + str(height*width)
+    Text(Point(150,30), val).draw(win)
+    
+    
+    
+    
