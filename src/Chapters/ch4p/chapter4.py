@@ -12,32 +12,38 @@ def test():
 
 def problem2():
     win = GraphWin("Archery", 400,400)
-
+    #create window
     
     white = Circle(Point(200,200),120)
     white.setOutline("Black")
     white.setFill("White")
     white.draw(win)
+    #create and draw the white circle
     
     black = Circle(Point(200,200),100)
     black.setOutline("White")
     black.setFill("Black")
     black.draw(win)
+    #create and draw the black circle
     
     blue = Circle(Point(200,200),80)
     blue.setOutline("Black")
     blue.setFill("Blue")
     blue.draw(win)
+        #create and draw the blue circle
+    
 
     red = Circle(Point(200,200),60)
     red.setOutline("Black")
     red.setFill("red")
     red.draw(win)
+    #create and draw the red circle
     
     yellow = Circle(Point(200,200),40)
     yellow.setOutline("Black")
     yellow.setFill("yellow")
     yellow.draw(win)
+    #create and draw the yellow circle
 def problem3():
     #draw a face
     win = GraphWin("A Face", 400,400)
@@ -64,6 +70,8 @@ def problem3():
     #add eye #2
     #finished the eyes
 
+    nose = Line(Point(200,195),Point(200,230))
+    nose.draw(win)
     #create the mouth
     mouth = Rectangle(Point(150,240),Point(250,245))
     mouth.setFill("Black")
@@ -92,7 +100,7 @@ def problem5():
     bdot3.setFill("Black")
     bdot3.draw(win)
     
-    
+    #THE REST OF THE CODE FOR THIS PROBLEM DRAWS THE DOTS ON THE DICE
     bdot4 = Circle(Point(119.33+75,85),6)
     bdot4.setFill("Black")
     bdot4.draw(win)
@@ -133,22 +141,33 @@ def problem5():
     bFINAL =  Circle(Point((119.33+75*3 + 141.66+75*3 )/2 ,85-8),6)
     bFINAL.setFill("Black")
     bFINAL.draw(win)
+    #end dot drawing
 
 def problem6():
  #   principal = 1000
  #   apr = .05
     correct =1
     win = GraphWin("Chart", 420,240)
+    #create window
     win.setBackground("white")
+
+    #add entry boxes
     pin = Entry(Point(300,50),20)
     aprin = Entry(Point(300,75),20)
     pin.draw(win)
     aprin.draw(win)
-    submit = Rectangle(Point(300,100),Point(320,123))
+    #draw them
+    
+    Text(Point(310,10), "Top box is principal - Bottom is apr").draw(win)
+    submit = Rectangle(Point(300,100),Point(350,135))
     submit.setFill("red")
     submit.draw(win)
+    Text(Point(325,110), "Submit").draw(win)
     win.getMouse()
+
+    #use try catch to block any errors
     try:
+        
         principal = float(eval(pin.getText()))
         apr = float(eval(aprin.getText()))
         correct = 1
@@ -156,6 +175,7 @@ def problem6():
         win.close()
         correct = 0
         print("Error: Please type in a valid value --\n You may reinvoke this function with the command problem6()")
+    #if input is succesful, run the rest of the code from the book
     if correct == 1:
         Text(Point(20,230), '0.0K').draw(win)
         Text(Point(20,180), '2.5K').draw(win)
@@ -176,29 +196,62 @@ def problem6():
             bar.setWidth(2)
             bar.draw(win)
                 
-        input("press enter to quit")
-        win.close()        
-        
-def problem9():
-    win = GraphWin("Give 2 Mouse Clicks", 300, 300)
+    input("Please press enter to close")
+    win.close()        
+
+def problem8():
+    #this is ec
+    win = GraphWin("Click two points to create a line", 400, 400);
     p = win.getMouse()
     x1,y1 = p.getX(), p.getY()
+    #get the mouse and assign it to variables
     p2 = win.getMouse()
     x2,y2 = p2.getX(), p2.getY()
+    #get the mouse and assign to variables
     point1 = Point(x1,y1)
     point2 = Point(x2,y2)
+    #create point objects out of the variables
+    line = Line(point1,point2).draw(win)
+    #draw the line with the points
+    midpoint = Point(((x1+x2)/2),((y2+y1)/2))
+    #calculate the midpoint of the line
+    midp = Circle(midpoint ,3)
+    #create midpoint object
+    midp.setFill("cyan")
+    midp.draw(win)
+    #set fill and draw midpoint
+    length = ((x2 - x1)**2 + (y2-y1)**2)**(1/2)
+    #calc distance with distance formula
+    val = "The slope " + str(round((x2-x1)/(y2-y1),3)) +" and the distance is " + str(round(length,3))
+    Text(Point(170,30), val).draw(win)
+    #output distance and slope
+def problem9():
+    win = GraphWin("Click to create a rectangle", 300, 300)
+    #create the window
+    
+    p = win.getMouse()
+    #get the mouse click
+
+    
+    x1,y1 = p.getX(), p.getY()
+    #assign mouse click values to variables
+
+    #get another mouse click and assign it to variables
+    p2 = win.getMouse()
+    x2,y2 = p2.getX(), p2.getY()
+
+    #create points that can be displayed
+    point1 = Point(x1,y1)
+    point2 = Point(x2,y2)
+    #create and display a rectangle from the points
     rect = Rectangle(point1,point2)
     rect.setFill("red")
     rect.draw(win)
+    #calculate width and height
     height = abs(x1-x2)
     width = abs(y1-y2)
-    print(2*(width+height))
-    print(height*width)
-    a = "The perimeter is"
-    b = " and the area is "
+    #create the string to be displayed
     val = "The perimeter is " + str(2*(height + width)) +" and the area is " + str(height*width)
+    #display it
     Text(Point(150,30), val).draw(win)
-    
-    
-    
     
