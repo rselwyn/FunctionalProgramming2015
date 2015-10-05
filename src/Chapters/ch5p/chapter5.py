@@ -43,13 +43,14 @@ def problem4():
     
 def problem6():
     text = input("enter a name to calculate the value of")
-    total = 0
+    total = int(0)
     charray = [" ", "A","B","C","D","E","F","G","H","I", "J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
     capital = ""
     for i in range(len(text)):
         capital = text[i].capitalize()
-        for i in range(len(charray)):
+        #print(capital)
+        for i in charray:
             if capital == i:
-                total += i
+                total = total + int(charray.index(capital))
     print(total)
         
