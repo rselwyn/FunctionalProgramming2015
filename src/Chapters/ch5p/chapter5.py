@@ -42,6 +42,7 @@ def problem4():
     print(final)
     
 def problem6():
+    #minor help from http://stackoverflow.com/questions/3847472/get-index-of-character-in-python-list
     text = input("enter a name to calculate the value of")
     total = int(0)
     charray = [" ", "A","B","C","D","E","F","G","H","I", "J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
@@ -53,4 +54,7 @@ def problem6():
             if capital == i:
                 total = total + int(charray.index(capital))
     print(total)
-        
+def problem9():
+    text = input("Enter a string")
+    text = text.split()
+    print("THere are ", len(text), "words in your entry")
