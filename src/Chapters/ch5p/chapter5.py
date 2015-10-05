@@ -41,5 +41,10 @@ def problem4():
             final = final + ac[i+1].capitalize()
     print(final)
     
-            
+def problem6():
+    text = input("enter a name to calculate the value of")
+    total = 0
+    charray = [" ", "A","B","C","D","E","F","G","H","I", "J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+
+    for i in range(len(text)):
         
