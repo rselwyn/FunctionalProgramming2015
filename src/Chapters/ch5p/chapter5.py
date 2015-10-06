@@ -58,3 +58,5 @@ def problem9():
     text = input("Enter a string")
     text = text.split()
     print("THere are ", len(text), "words in your entry")
+def problem10():
+    
