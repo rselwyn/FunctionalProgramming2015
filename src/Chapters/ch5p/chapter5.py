@@ -55,8 +55,15 @@ def problem6():
                 total = total + int(charray.index(capital))
     print(total)
 def problem9():
-    text = input("Enter a string")
+    text = input("Enter some text for which I can calculate the number of words.")
     text = text.split()
     print("THere are ", len(text), "words in your entry")
 def problem10():
+    text = input("Enter a string of text for which I can calculate the average length of the words.")
+    text = text.split()
+    tls = 0
+    numw = len(text)
+    for i in range(len(text)):
+        tls += len(text[i])
+    print(tls/numw)
     
