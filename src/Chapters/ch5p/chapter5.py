@@ -49,7 +49,6 @@ def problem6():
     capital = ""
     for i in range(len(text)):
         capital = text[i].capitalize()
-        #print(capital)
         for i in charray:
             if capital == i:
                 total = total + int(charray.index(capital))
