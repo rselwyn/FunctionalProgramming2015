@@ -1,4 +1,4 @@
-#programming for ch5
+#programming for ch5:
 #problems 1-4, 6,9-12
 # 8,15,16 e
 def problem1():
@@ -65,4 +65,16 @@ def problem10():
     for i in range(len(text)):
         tls += len(text[i])
     print(tls/numw)
-    
+def problem11():
+    print("This is a chaotic function")
+    x = float(input("Enter a number between 0 and 1"))
+    y = float(input("Enter another number between 0 and 1"))
+    iterations = int(input("Enter the number of iterations of the chaotic loop"))
+    print("input   ",x, "    ", y)
+    print("-----------------------------")
+    for i in range(iterations):     
+        x = 3.9 * x * (1-x)
+        y = 3.9 * y * (1-y)
+        print ("         {0:0.4f}    {1:0.4f}".format(x,y)      )
+ 
+           
