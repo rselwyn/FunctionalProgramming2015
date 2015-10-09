@@ -77,4 +77,18 @@ def problem11():
         y = 3.9 * y * (1-y)
         print ("{0}         {1:0.4f}    {2:0.4f}".format(i,x,y)      )
  
-           
+def problem12():
+    principal = float(input("Enter the principal"))
+    apr = float(input("Enter the apr"))
+    years = int(input("Enter the years"))
+    print("Year    Value")
+    print("-----------------")
+    for i in range(years+1):
+        if i < 10:
+            print("{0}       {1:0.2f}".format(i, principal))
+            principal = principal*(1+apr)
+        elif i < 100:
+            print("{0}      {1:0.2f}".format(i, principal))
+            principal = principal*(1+apr)
+        
+    
