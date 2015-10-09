@@ -70,11 +70,11 @@ def problem11():
     x = float(input("Enter a number between 0 and 1"))
     y = float(input("Enter another number between 0 and 1"))
     iterations = int(input("Enter the number of iterations of the chaotic loop"))
-    print("input   ",x, "    ", y)
+    print("Index   ",x, "    ", y)
     print("-----------------------------")
     for i in range(iterations):     
         x = 3.9 * x * (1-x)
         y = 3.9 * y * (1-y)
-        print ("         {0:0.4f}    {1:0.4f}".format(x,y)      )
+        print ("{0}         {1:0.4f}    {2:0.4f}".format(i,x,y)      )
  
            
