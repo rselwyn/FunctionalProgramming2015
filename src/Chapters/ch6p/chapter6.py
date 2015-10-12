@@ -14,7 +14,7 @@ def sumN(x):
     #x is the number of natural numbers
     y = 0
     #y is the value where the numbers get accumulated
-    for i in range(x+1):
+    for i in range(int(x+1)):
         #assuming that the set of natural numbers is all integers
         #(0, infinity) in interval notation
         #add one to nuber of iterations because natural numbers don't include zero
@@ -37,10 +37,10 @@ def sumNCubes(x):
     print(y)
 
 #INVOKE THE FUNCTIONS
+print("PROBLEM 4")
+sumN(int(input("ENTER THE NUMBER OF NATURAL NUMBERS TO BE ADDED")))
 
-sumN(input("ENTER THE NUMBER OF NATURAL NUMBERS TO BE ADDED"))
-
-sumNCubes(input("ENTER THE NUMBER OF NATURAL NUMBERS TO BE CUBED AND THEN ADDED"))
+sumNCubes(int(input("ENTER THE NUMBER OF NATURAL NUMBERS TO BE CUBED AND THEN ADDED")))
 
 
 #END PROBLEM 4
@@ -51,6 +51,7 @@ sumNCubes(input("ENTER THE NUMBER OF NATURAL NUMBERS TO BE CUBED AND THEN ADDED"
 #OF ITS THREE SIDES AS PARAMETERS
 
 
+print("PROBLEM 6")
 
 a = float(input("enter the value of side 1"))
 b = float(input("enter the value of side 2"))
@@ -75,6 +76,7 @@ area(a,b,c)
 #WRITE A FUNCTION THAT COMPUTES THE nth FIBONACCI NUMBER
 
 
+print("PROBLEM 7")
 def fib(hm):
 
     tnum1 = 0
@@ -102,6 +104,7 @@ fib(hm)
 
 #######PROBLEM 9 ##############
 
+print("PROBLEM 9")
 def grade(x):
     #get the score as a number
     #convert the number to a letter grade
@@ -123,6 +126,8 @@ grade(x)
 ###### END PROBLEM 9
 
 ######### Problem 10
+
+print("PROBLEM 10")
 ac = " " + input("Please enter the string that to make an acronym")
 def acronym(ac):
     final = ""
@@ -138,6 +143,18 @@ def acronym(ac):
 acronym(ac)
 ####END Problem 10
 
+######PROBLEM 11
+
+print("PROBLEM 11")
+def squareEach(nums):
+    for i in range(len(nums)):
+        #print(type(nums[i]))
+        nums[i] = float(nums[i])   
+        nums[i] = nums[i]**2
+        print("HERE")
+    print(nums)
+
+squareEach(input("ENTER A LIST OF NUMBERS").split(","))
 
 
 
