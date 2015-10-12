@@ -159,6 +159,7 @@ squareEach(input("EENTER A LIST OF NUMBERS SEPERATED BY COMMAS, NO NEED FOR BRAC
 ##END
 
 ###PROBLEM 12
+print("PROBLEM 12")
 def sumList(nums):
     total = float(0)
     for i in range(len(nums)):
@@ -173,5 +174,18 @@ sumList(input("ENTER A LIST OF NUMBERS SEPERATED BY COMMAS. NO NEED FOR BRACKETS
 ##END
 
 ###PROBLEM 13
+
+##MY sumList() function works for problems 12 and 13
+print("PROBLEM 13")
+def sumList(nums):
+    total = float(0)
+    for i in range(len(nums)):
+        #print(type(nums[i]))
+        nums[i] = float(nums[i])   
+        total = total + nums[i]
+        
+    print(total)
+
+sumList(input("ENTER A LIST OF NUMBERS SEPERATED BY COMMAS. NO NEED FOR BRACKETS").split(","))
 
 
