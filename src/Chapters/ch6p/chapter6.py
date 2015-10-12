@@ -151,12 +151,27 @@ def squareEach(nums):
         #print(type(nums[i]))
         nums[i] = float(nums[i])   
         nums[i] = nums[i]**2
-        print("HERE")
+        
     print(nums)
 
-squareEach(input("ENTER A LIST OF NUMBERS").split(","))
+squareEach(input("EENTER A LIST OF NUMBERS SEPERATED BY COMMAS, NO NEED FOR BRACKETS").split(","))
 
+##END
 
+###PROBLEM 12
+def sumList(nums):
+    total = float(0)
+    for i in range(len(nums)):
+        #print(type(nums[i]))
+        nums[i] = float(nums[i])   
+        total = total + nums[i]
+        
+    print(total)
 
+sumList(input("ENTER A LIST OF NUMBERS SEPERATED BY COMMAS. NO NEED FOR BRACKETS").split(","))
+
+##END
+
+###PROBLEM 13
 
 
