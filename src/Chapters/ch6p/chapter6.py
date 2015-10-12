@@ -120,7 +120,23 @@ x = float(input("Enter the quiz score"))
 grade(x)
 
 
-######END PROBLEM 9
+###### END PROBLEM 9
+
+######### Problem 10
+ac = " " + input("Please enter the string that to make an acronym")
+def acronym(ac):
+    final = ""
+    #initialize the final acronym string
+
+    #the algorithim runs through the string. If there is a space, it takes the next letter and capitalizes it and adds it to the final string.
+    for i in range(len(ac)):
+        if ac[i] == " ":
+            final = final + ac[i+1].capitalize()
+    #print out the final acronym
+    print(final)
+    
+acronym(ac)
+####END Problem 10
 
 
 
