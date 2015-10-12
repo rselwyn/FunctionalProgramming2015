@@ -7,7 +7,7 @@ a = float(input("enter the value of side 1"))
 b = float(input("enter the value of side 2"))
 c = float(input("enter the value of side 3"))
 
-def problem9(a,b,c):
+def area(a,b,c):
     #get side lengths value
     #calculate the value of (a+b+c)/2
     s = (a+b+c)/2
@@ -16,4 +16,4 @@ def problem9(a,b,c):
     print("the area is", area)
     
 
-problem9(a,b,c)
+area(a,b,c)
