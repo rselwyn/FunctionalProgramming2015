@@ -189,3 +189,20 @@ def sumList(nums):
 sumList(input("ENTER A LIST OF NUMBERS SEPERATED BY COMMAS. NO NEED FOR BRACKETS").split(","))
 
 
+##########BONUS PROBLEMS ####################
+
+#PROBLEM 3
+
+print("Problem 3 Extra credit")
+import math
+pi = math.pi
+def sphereArea(radius):
+    return "The surface area of the sphere is (0:3f}".format((4*pi*radius**2))
+    
+def sphereVolume(radius):
+    return "The volume of the sphere is {0:.3f}".format(((4/3)*pi*radius**3))
+sphereArea(float(input("ENTER THE radius of a sphere for the sa")))
+
+sphereVolume(float(input("ENTER THE radius of a sphere for the volume")))
+
+
