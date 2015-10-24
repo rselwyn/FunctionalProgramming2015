@@ -182,11 +182,10 @@ def sumList(nums):
     for i in range(len(nums)):
         #print(type(nums[i]))
         nums[i] = float(nums[i])   
-        total = total + nums[i]
         
-    print(total)
+    print(nums)
 
-sumList(input("ENTER A LIST OF NUMBERS SEPERATED BY COMMAS. NO NEED FOR BRACKETS").split(","))
+sumList(input("ENTER A LIST OF NUMBERS SEPERATED BY COMMAS. NO NEED FOR BRACKETS").replace('"',"").split(","))
 
 
 ##########BONUS PROBLEMS ####################
@@ -195,14 +194,17 @@ sumList(input("ENTER A LIST OF NUMBERS SEPERATED BY COMMAS. NO NEED FOR BRACKETS
 
 print("Problem 3 Extra credit")
 import math
+#get the math lib
 pi = math.pi
+#define pi
 def sphereArea(radius):
     return "The surface area of the sphere is (0:3f}".format((4*pi*radius**2))
     
 def sphereVolume(radius):
     return "The volume of the sphere is {0:.3f}".format(((4/3)*pi*radius**3))
-sphereArea(float(input("ENTER THE radius of a sphere for the sa")))
+#INVOKE
+print(sphereArea(float(input("ENTER THE radius of a sphere for the sa"))))
 
-sphereVolume(float(input("ENTER THE radius of a sphere for the volume")))
+print(sphereVolume(float(input("ENTER THE radius of a sphere for the volume"))))
 
 
