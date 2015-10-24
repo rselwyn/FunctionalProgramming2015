@@ -64,7 +64,6 @@ def problem4():
     
 def problem6():
     #see readme for line by line explanation
-    #minor help from http://stackoverflow.com/questions/3847472/get-index-of-character-in-python-list
     text = input("enter a name to calculate the value of")
     total = int(0)
     charray = [" ", "A","B","C","D","E","F","G","H","I", "J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
@@ -78,10 +77,8 @@ def problem6():
 def problem9():
     text = input("Enter some text for which I can calculate the number of words.")
     #get a piece of text
-    text = text.split()
-    #split the text up into words
     #because each index of the array is a word, I can calculate the number of words with len()
-    print("THere are ", len(text), "words in your entry")
+    print("THere are ", len(text.split()), "words in your entry")
 def problem10():
     text = input("Enter a string of text for which I can calculate the average length of the words.")
     #get the string of text
