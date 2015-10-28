@@ -1,5 +1,5 @@
 #1-3,6-8,11,12,16
-
+import math
 def problem1():
     hours = int(input("How many hours did you work this week?"))
     wage = float(input("Enter your hourly wage"))
@@ -40,3 +40,17 @@ def problem3():
         print("D")
     else:
         print("F")
+
+def problem6():
+    limit = int(input("What is the speed limit?"))
+    speed = float(input("What is your speed?"))
+    fine = int(50)
+    if speed>limit:
+        fine = fine + 5*math.floor(speed-limit)
+        if speed > 90:
+            fine += 200
+        print(fine)
+    else:
+        print("You were under the speed limit.  YAY!!")
+    
+
