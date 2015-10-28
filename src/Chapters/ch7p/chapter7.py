@@ -23,4 +23,20 @@ def problem2():
     elif x ==2:
         print("D")
     else:
-        print("F")   
+        print("F")
+        
+def problem3():
+    #get the score as a number
+    x = float(input("Enter the quiz score"))
+    
+    #convert the number to a letter grade
+    if x >=90:
+        print("A")
+    elif x>=80:
+        print("B")
+    elif x>=70:
+        print("C")
+    elif x >=60:
+        print("D")
+    else:
+        print("F")
