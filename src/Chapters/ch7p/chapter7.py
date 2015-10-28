@@ -53,4 +53,36 @@ def problem6():
     else:
         print("You were under the speed limit.  YAY!!")
     
-
+def problem7():
+    firsttime = input("enter the hour, minutes, and AM or PM seperated by commas\nExamples.\n9,22,AM (9:22 AM)\n12,22,AM (12:22 AM)\n").split(",")
+    secondtime = input("enter the hour, minutes, and AM or PM seperated by commas").split(",")
+    md = float(0);
+    #account for PM
+    for i in range(1):
+        firsttime[i] = int(firsttime[i])
+        secondtime[i] = int(secondtime[i])
+    
+    if firsttime[2][0]=="P":
+        firsttime[0] += 12
+    #account for PM
+    if secondtime[2][0]=="P":
+        secondtime[0] += 12
+    
+    
+    if int(secondtime[0]) >= 21:
+        #logic
+        print("hi")
+    else:
+        #other logic
+        md = (int(secondtime[0])-int(firsttime[0]))*60 + int(secondtime[1])-int(firsttime[1])
+        print((md/60)*2.5)
+    
+    
+    
+    
+    
+        
+        
+        
+    
+        
