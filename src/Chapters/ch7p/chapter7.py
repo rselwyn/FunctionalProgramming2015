@@ -86,6 +86,14 @@ def problem8():
     if age>=25 and years>=7:
         print("you are eligible for the house")
     
+def problem11():
+    year = int(input("input the year"))
+    if year%4==0 and (year-(year%100))%400==0:
+        print("LEAP YEAR")
+        return
+    print("NOT LEAP YEAR")
+
+#def problem12():
     
 
     
