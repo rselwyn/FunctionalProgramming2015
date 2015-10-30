@@ -68,14 +68,15 @@ def problem7():
     if secondtime[2][0]=="P":
         secondtime[0] += 12
     
-    
     if int(secondtime[0]) >= 21:
         #logic
-        print("hi")
+        before9money =  ((int(21)-int(firsttime[0]))*60 + int(0)-int(firsttime[1]))/60
+        after9 = ((int(secondtime[0])-int(21))*60 + int(secondtime[1])-int(0))/60
+        print("You made ${0:3f}".format(before9money*2.5 + after9*1.75))
     else:
         #other logic
         md = (int(secondtime[0])-int(firsttime[0]))*60 + int(secondtime[1])-int(firsttime[1])
-        print((md/60)*2.5)
+        print("You made ${0:3f}".format((md/60)*2.5))
     
     
     
