@@ -93,9 +93,17 @@ def problem11():
         return
     print("NOT LEAP YEAR")
 
-#def problem12():
+def problem12():
+    date = input("enter the date")
+    date = date.split("/")
+    for i in range(len(date)):
+        date[i] = int(date[i])
+    enddate = [31,28,31,30,31,30,31,31,30,31,30,31]
+    if int(date[1]) <= int(enddate[date[0]-1]):
+        print("Valid")
+        return
+    print("Invalid")
     
-
     
     
         
