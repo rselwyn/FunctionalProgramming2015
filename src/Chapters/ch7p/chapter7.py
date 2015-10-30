@@ -78,8 +78,16 @@ def problem7():
         md = (int(secondtime[0])-int(firsttime[0]))*60 + int(secondtime[1])-int(firsttime[1])
         print("You made ${0:3f}".format((md/60)*2.5))
     
+def problem8():
+    age = int(input("Input your age"))
+    years = int(input("how many years have you been a US citizen"))
+    if age>=30 and years>=9:
+        print("you are eligible for the senate")
+    if age>=25 and years>=7:
+        print("you are eligible for the house")
     
     
+
     
     
         
