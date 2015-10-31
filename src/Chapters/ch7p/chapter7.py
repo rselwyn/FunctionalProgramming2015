@@ -1,4 +1,5 @@
 #1-3,6-8,11,12,16
+from graphics import *
 import math
 def problem1():
     hours = int(input("How many hours did you work this week?"))
@@ -78,11 +79,86 @@ def problem7():
         md = (int(secondtime[0])-int(firsttime[0]))*60 + int(secondtime[1])-int(firsttime[1])
         print("You made ${0:3f}".format((md/60)*2.5))
     
+def problem8():
+    age = int(input("Input your age"))
+    years = int(input("how many years have you been a US citizen"))
+    if age>=30 and years>=9:
+        print("you are eligible for the senate")
+    if age>=25 and years>=7:
+        print("you are eligible for the house")
+    
+def problem11():
+    year = int(input("input the year"))
+    if year%4==0 and (year-(year%100))%400==0:
+        print("LEAP YEAR")
+        return
+    print("NOT LEAP YEAR")
+
+def problem12():
+    date = input("enter the date")
+    date = date.split("/")
+    for i in range(len(date)):
+        date[i] = int(date[i])
+    enddate = [31,28,31,30,31,30,31,31,30,31,30,31]
+    if int(date[1]) <= int(enddate[date[0]-1]):
+        print("Valid")
+        return
+    print("Invalid")
+def problem16():
+    win = GraphWin("Archery", 400,400)
+    #create window
+    
+    white = Circle(Point(200,200),120)
+    white.setOutline("Black")
+    white.setFill("White")
+    white.draw(win)
+    #create and draw the white circle
+    
+    black = Circle(Point(200,200),100)
+    black.setOutline("White")
+    black.setFill("Black")
+    black.draw(win)
+    #create and draw the black circle
+    
+    blue = Circle(Point(200,200),80)
+    blue.setOutline("Black")
+    blue.setFill("Blue")
+    blue.draw(win)
+        #create and draw the blue circle
+    
+
+    red = Circle(Point(200,200),60)
+    red.setOutline("Black")
+    red.setFill("red")
+    red.draw(win)
+    #create and draw the red circle
+    
+    yellow = Circle(Point(200,200),40)
+    yellow.setOutline("Black")
+    yellow.setFill("yellow")
+    yellow.draw(win)
+    #create and draw the yellow circle
+    totalval = int(0)
+    for i in range(5):
+        click = win.getMouse()
+        howFar = distance(click.getX(),click.getY())
+        if howFar < 120:
+            totalval+=2
+            if howFar < 100:
+                totalval +=2
+                if howFar <80:
+                    totalval +=2
+                    if howFar <60:
+                        totalval+=2
+                        if howFar < 40:
+                            totalval+=2
+    print(totalval)
+#helper function for problem 16
+def distance(x1,y1):
+    return ((200-x1)**2 + (200-y1)**2)**(1/2)
     
     
     
-    
-        
         
         
     
