@@ -157,7 +157,26 @@ def problem16():
 def distance(x1,y1):
     return ((200-x1)**2 + (200-y1)**2)**(1/2)
     
-    
+
+############EXTRA CREDIT PROBLEMSw
+def problem4():
+    creds = int(input("input the number of credits"))
+    if creds<7:
+        print("Freshman")
+    elif creds < 16:
+        print("Sophmore")
+    elif creds<26:
+        print("Junior")
+    else:
+        print("senior")
+def problem5():
+    weight = int(input("Enter your weight"))
+    height = int(input("Enter your height"))
+    bmi = weight * (720/(height**2))
+    if 19 <= bmi and bmi<=25:
+        print("healthy")
+        return
+    print("unhealthy")
     
         
         
