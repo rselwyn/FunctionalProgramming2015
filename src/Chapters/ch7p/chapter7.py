@@ -1,4 +1,5 @@
 #1-3,6-8,11,12,16
+from graphics import *
 import math
 def problem1():
     hours = int(input("How many hours did you work this week?"))
@@ -103,10 +104,61 @@ def problem12():
         print("Valid")
         return
     print("Invalid")
+def problem16():
+    win = GraphWin("Archery", 400,400)
+    #create window
+    
+    white = Circle(Point(200,200),120)
+    white.setOutline("Black")
+    white.setFill("White")
+    white.draw(win)
+    #create and draw the white circle
+    
+    black = Circle(Point(200,200),100)
+    black.setOutline("White")
+    black.setFill("Black")
+    black.draw(win)
+    #create and draw the black circle
+    
+    blue = Circle(Point(200,200),80)
+    blue.setOutline("Black")
+    blue.setFill("Blue")
+    blue.draw(win)
+        #create and draw the blue circle
+    
+
+    red = Circle(Point(200,200),60)
+    red.setOutline("Black")
+    red.setFill("red")
+    red.draw(win)
+    #create and draw the red circle
+    
+    yellow = Circle(Point(200,200),40)
+    yellow.setOutline("Black")
+    yellow.setFill("yellow")
+    yellow.draw(win)
+    #create and draw the yellow circle
+    totalval = int(0)
+    for i in range(5):
+        click = win.getMouse()
+        howFar = distance(click.getX(),click.getY())
+        if howFar < 120:
+            totalval+=2
+            if howFar < 100:
+                totalval +=2
+                if howFar <80:
+                    totalval +=2
+                    if howFar <60:
+                        totalval+=2
+                        if howFar < 40:
+                            totalval+=2
+    print(totalval)
+#helper function for problem 16
+def distance(x1,y1):
+    return ((200-x1)**2 + (200-y1)**2)**(1/2)
     
     
     
-        
         
         
     
