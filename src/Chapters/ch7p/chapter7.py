@@ -158,7 +158,7 @@ def distance(x1,y1):
     return ((200-x1)**2 + (200-y1)**2)**(1/2)
     
 
-############EXTRA CREDIT PROBLEMSw
+############EXTRA CREDIT PROBLEMS
 def problem4():
     creds = int(input("input the number of credits"))
     if creds<7:
@@ -178,7 +178,50 @@ def problem5():
         return
     print("unhealthy")
     
-        
-        
+def problem9():
+    year = int(input("Enter the year"))
+    #get the year
+    #validate the year
+    if year <= 1982 or year>=2048:
+        print("invaid year")
+        return
+    #######THIS IS THE FORMULA FROM THE BOOK
+    a = year%19
+    b = year%4
+    c = year%7
+    d = (19 * a +24)%30
+    e = (2*b + 4*c + 6*d +5)%7
+    if 22 + d + e <= 31:
+        print("Easter is on March "+str(22+d+e))
+        return
+    print("Easter is on April "+str(-9+d+e))
+def problem10():
+    year = int(input("Enter the year"))
+    #get the year
+    #validate the year
+    if year <= 1900 or year>=2099:
+        print("invaid year")
+        return
+    #######THIS IS THE FORMULA FROM THE BOOK
+    a = year%19
+    b = year%4
+    c = year%7
+    d = (19 * a +24)%30
+    e = (2*b + 4*c + 6*d +5)%7
+
+    exceptionYears = [1954,1981,2049,2076]
+    
+    if year in exceptionYears:
+        if 22 + d + e -7 <= 31:
+            print("Easter is on March "+str(22+d+e-7))
+            return
+        print("Easter is on April "+str(-9+d+e-7))
+        return
+    
+    if 22 + d + e <= 31:
+        print("Easter is on March "+str(22+d+e))
+        return
+    print("Easter is on April "+str(-9+d+e))
+
     
         
