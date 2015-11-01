@@ -222,6 +222,40 @@ def problem10():
         print("Easter is on March "+str(22+d+e))
         return
     print("Easter is on April "+str(-9+d+e))
-
     
+################PROBLEM 13
+def problem13():
+    daynum = 0
+    date = input("Enter a date in MM/DD/YYYY").split("/")
+    if validateDate(date):
+        daynum = 31(int(date[0]))+int(date[1])
+        if date[1] > 1:
+            daynum+=1
+            if isLeapYear(int(date[3])) and ((date[0] > 2)):
+                daynum+=1
+                print(daynum)
+                return
+            else:
+                print(daynum)
+                return
+        else:
+            print(daynum)
+            return
+    
+    print("invalid date")
         
+        
+def validateDate(date):
+    ############VALIDATE THE MONTH and YEAR
+    if int(date[2]) >= 99 or int(date[1]) > 12:
+        return false
+    for i in range(len(date)):
+        date[i] = int(date[i])
+    enddate = [31,29,31,30,31,30,31,31,30,31,30,31]
+    if int(date[1]) <= int(enddate[date[0]-1]):
+        return true
+    return false
+def isLeapYear(year):
+    if year%4==0 and (year-(year%100))%400==0:
+        return true
+    return false
