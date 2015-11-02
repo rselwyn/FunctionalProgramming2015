@@ -158,7 +158,7 @@ def distance(x1,y1):
     return ((200-x1)**2 + (200-y1)**2)**(1/2)
     
 
-############EXTRA CREDIT PROBLEMSw
+############EXTRA CREDIT PROBLEMS
 def problem4():
     creds = int(input("input the number of credits"))
     if creds<7:
@@ -178,7 +178,84 @@ def problem5():
         return
     print("unhealthy")
     
-        
-        
+def problem9():
+    year = int(input("Enter the year"))
+    #get the year
+    #validate the year
+    if year <= 1982 or year>=2048:
+        print("invaid year")
+        return
+    #######THIS IS THE FORMULA FROM THE BOOK
+    a = year%19
+    b = year%4
+    c = year%7
+    d = (19 * a +24)%30
+    e = (2*b + 4*c + 6*d +5)%7
+    if 22 + d + e <= 31:
+        print("Easter is on March "+str(22+d+e))
+        return
+    print("Easter is on April "+str(-9+d+e))
+def problem10():
+    year = int(input("Enter the year"))
+    #get the year
+    #validate the year
+    if year <= 1900 or year>=2099:
+        print("invaid year")
+        return
+    #######THIS IS THE FORMULA FROM THE BOOK
+    a = year%19
+    b = year%4
+    c = year%7
+    d = (19 * a +24)%30
+    e = (2*b + 4*c + 6*d +5)%7
+
+    exceptionYears = [1954,1981,2049,2076]
     
+    if year in exceptionYears:
+        if 22 + d + e -7 <= 31:
+            print("Easter is on March "+str(22+d+e-7))
+            return
+        print("Easter is on April "+str(-9+d+e-7))
+        return
+    
+    if 22 + d + e <= 31:
+        print("Easter is on March "+str(22+d+e))
+        return
+    print("Easter is on April "+str(-9+d+e))
+    
+################PROBLEM 13
+def problem13():
+    daynum = 0
+    date = input("Enter a date in MM/DD/YYYY").split("/")
+    if validateDate(date):
+        daynum = 31(int(date[0]))+int(date[1])
+        if date[1] > 1:
+            daynum+=1
+            if isLeapYear(int(date[2])) or ((date[0] > 2)):
+                daynum+=1
+                print(daynum)
+                return
+            else:
+                print(daynum)
+                return
+        else:
+            print(daynum)
+            return
+    
+    print("invalid date")
         
+        
+def validateDate(date):
+    ############VALIDATE THE MONTH and YEAR
+    if int(date[2]) >= 99 or int(date[1]) > 12:
+        return False
+    for i in range(len(date)):
+        date[i] = int(date[i])
+    enddate = [31,29,31,30,31,30,31,31,30,31,30,31]
+    if int(date[1]) <= int(enddate[date[0]-1]):
+        return True
+    return False
+def isLeapYear(year):
+    if year%4==0 and (year-(year%100))%400==0:
+        return True
+    return False
