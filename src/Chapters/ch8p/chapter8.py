@@ -54,3 +54,21 @@ def problem6():
         if isPrime(i):
             print(i, "is prime")
     
+def problem9():
+    starting = int(input("Please enter the starting odometer reading"))
+    keepGoing = True
+    totalMPG = 0
+    data = []
+    tMPGcalc = []
+    while keepGoing:
+        newData = input("ENTER the Distance and Gallons of gas used seperated by a space")
+        if newData == "":
+            break
+        data.append(newData)
+    for i in range(len(data)):
+        print("Leg 1 MPG", float(data[i].split()[0])/float(data[i].split()[1]))
+        tMPGcalc.append(float(data[i].split()[0])/float(data[i].split()[1]))
+    for i in range(len(tMPGcalc)):
+        totalMPG += tMPGcalc[i]
+    print("TOTAL MPG:", totalMPG/len(tMPGcalc))
+        
