@@ -72,3 +72,8 @@ def problem9():
         totalMPG += tMPGcalc[i]
     print("TOTAL MPG:", totalMPG/len(tMPGcalc))
         
+def problem11():
+    numColDays = int(0)
+    numWarmDays = int(0)
+    print("PLEASE MAKE SURE YOU HAVE ADDED the data into problem8data.txt.\n Make sure that each temp is on its own line.")
+    
