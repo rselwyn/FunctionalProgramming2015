@@ -75,5 +75,15 @@ def problem9():
 def problem11():
     numColDays = int(0)
     numWarmDays = int(0)
-    print("PLEASE MAKE SURE YOU HAVE ADDED the data into problem8data.txt.\n Make sure that each temp is on its own line.")
+    print("PLEASE MAKE SURE YOU HAVE ADDED the data into problem11data.txt.\n Make sure that each temp is on its own line.")
+    input("Pleae press enter to confirm")
+    data = open("problem11data.txt","r")
+    info = data.readlines()
+    for i in range(len(info)):
+        if int(info[i]) < 60:
+            numWarmDays+=1
+        elif int(info[i]) > 80:
+            numColDays+=1
+    print("There were {} warming days and {} cooling days".format(numWarmDays,numColDays))
+    data.close()
     
