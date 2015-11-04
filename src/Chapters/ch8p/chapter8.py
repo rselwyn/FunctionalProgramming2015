@@ -33,3 +33,24 @@ def problem2():
                     print ("{0:4f}".format(val), " ", end="")
             print("")
             
+def problem5():
+    if isPrime(int(input("ENTER A NUMBER"))):
+        print("YES -- PRIME")
+        return 
+    
+    print("NOT PRIME")
+
+##########HELPER OF problem5() and problem6()
+import math
+def isPrime(number):
+    for i in range(2,math.ceil(number)):
+        if number % i == 0:
+            return False
+    return True
+    
+def problem6():
+    num = int(input("Enter the number to print all the prime numbers less than"))
+    for i in range(2,num):
+        if isPrime(i):
+            print(i, "is prime")
+    
