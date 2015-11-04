@@ -54,3 +54,36 @@ def problem6():
         if isPrime(i):
             print(i, "is prime")
     
+def problem9():
+    starting = int(input("Please enter the starting odometer reading"))
+    keepGoing = True
+    totalMPG = 0
+    data = []
+    tMPGcalc = []
+    while keepGoing:
+        newData = input("ENTER the Distance and Gallons of gas used seperated by a space")
+        if newData == "":
+            break
+        data.append(newData)
+    for i in range(len(data)):
+        print("Leg 1 MPG", float(data[i].split()[0])/float(data[i].split()[1]))
+        tMPGcalc.append(float(data[i].split()[0])/float(data[i].split()[1]))
+    for i in range(len(tMPGcalc)):
+        totalMPG += tMPGcalc[i]
+    print("TOTAL MPG:", totalMPG/len(tMPGcalc))
+        
+def problem11():
+    numColDays = int(0)
+    numWarmDays = int(0)
+    print("PLEASE MAKE SURE YOU HAVE ADDED the data into problem11data.txt.\n Make sure that each temp is on its own line.")
+    input("Pleae press enter to confirm")
+    data = open("problem11data.txt","r")
+    info = data.readlines()
+    for i in range(len(info)):
+        if int(info[i]) < 60:
+            numWarmDays+=1
+        elif int(info[i]) > 80:
+            numColDays+=1
+    print("There were {} warming days and {} cooling days".format(numWarmDays,numColDays))
+    data.close()
+    
