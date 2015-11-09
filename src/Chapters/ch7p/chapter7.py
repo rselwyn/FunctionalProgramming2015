@@ -6,6 +6,7 @@ def problem1():
     wage = float(input("Enter your hourly wage"))
 
     if hours <= 40:
+        #in the case that they work less than 40 hours (or equal)
         print("You made {0:.2f} this week".format(hours*wage))
     else:
         print("You made {0:.2f} this week".format(40*wage + (1.5*(hours-40))*wage ))
