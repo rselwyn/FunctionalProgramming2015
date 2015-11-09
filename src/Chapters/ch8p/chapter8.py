@@ -29,10 +29,14 @@ def problem2():
                 #Z is temp
                 if z%10==0:
                     ##PRINT
-                    val = 35.74 + .6215 * z - (35.75 * (i)**(.16)) + .4275 * z * ((i)**(.16))
+                    val = windVal(z,i)
                     print ("{0:4f}".format(val), " ", end="")
             print("")
-            
+######HELPER FUNCTION FOR PROBLEM2
+def windVal(z,i):
+    val = 35.74 + .6215 * z - (35.75 * (i)**(.16)) + .4275 * z * ((i)**(.16))
+    return val
+
 def problem5():
     if isPrime(int(input("ENTER A NUMBER"))):
         print("YES -- PRIME")
