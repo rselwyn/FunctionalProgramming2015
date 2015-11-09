@@ -234,6 +234,7 @@ def problem10():
     e = (2*b + 4*c + 6*d +5)%7
 
     exceptionYears = [1954,1981,2049,2076]
+<<<<<<< HEAD
     
     if year in exceptionYears:
         if 22 + d + e -7 <= 31:
@@ -247,3 +248,19 @@ def problem10():
         return
     print("Easter is on April "+str(-9+d+e))
     
+=======
+    
+    if year in exceptionYears:
+        if 22 + d + e -7 <= 31:
+            print("Easter is on March "+str(22+d+e-7))
+            return
+        print("Easter is on April "+str(-9+d+e-7))
+        return
+    
+    if 22 + d + e <= 31:
+        print("Easter is on March "+str(22+d+e))
+        return
+    print("Easter is on April "+str(-9+d+e))
+    
+
+>>>>>>> 40c0d27b277871aa131be05f939c96eebb3bdaf6
