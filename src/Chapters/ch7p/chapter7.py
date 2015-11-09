@@ -9,6 +9,7 @@ def problem1():
         #in the case that they work less than 40 hours (or equal)
         print("You made {0:.2f} this week".format(hours*wage))
     else:
+        #Overtime
         print("You made {0:.2f} this week".format(40*wage + (1.5*(hours-40))*wage ))
         
 def problem2():
