@@ -3,8 +3,9 @@ from graphics import *
 import math
 def problem1():
     hours = int(input("How many hours did you work this week?"))
+    ##Get the hours
     wage = float(input("Enter your hourly wage"))
-
+    ##Get the wage of the person
     if hours <= 40:
         #in the case that they work less than 40 hours (or equal)
         print("You made {0:.2f} this week".format(hours*wage))
@@ -50,6 +51,7 @@ def problem6():
     speed = float(input("What is your speed?"))
     ####Get the speed
     fine = int(50)
+    ##The fine starts at 50 dollars
     if speed>limit:
         #In the case you are speeding
         fine = fine + 5*math.floor(speed-limit)
@@ -68,26 +70,34 @@ def problem7():
     secondtime = input("enter the hour, minutes, and AM or PM seperated by commas").split(",")
     md = float(0);
     #account for PM
+
+    ##Make everything ints
     for i in range(1):
         firsttime[i] = int(firsttime[i])
         secondtime[i] = int(secondtime[i])
-    
+    ##If it is PM, convert it to military time for hourss
     if firsttime[2][0]=="P":
         firsttime[0] += 12
     #account for PM
-        
+       ##If it is PM, convert it to military time for hourss
     if secondtime[2][0]=="P":
         secondtime[0] += 12
     
     if int(secondtime[0]) >= 21:
-        #logic
+        #If after 9
         before9money =  ((int(21)-int(firsttime[0]))*60 + int(0)-int(firsttime[1]))/60
+        ##Get the hours for all the time before 9
+
+        #Get the amount of time for after 9
         after9 = ((int(secondtime[0])-int(21))*60 + int(secondtime[1])-int(0))/60
+        #Multiply by rate and print it out
         print("You made ${0:3f}".format(before9money*2.5 + after9*1.75))
     else:
-        #other logic
+        
         #If the second time isn't after 9
+        #COnvert everything to minutes (md)
         md = (int(secondtime[0])-int(firsttime[0]))*60 + int(secondtime[1])-int(firsttime[1])
+        ###Print the rounded conversion to hours time 2.5
         print("You made ${0:3f}".format((md/60)*2.5))
     
 def problem8():
@@ -183,8 +193,13 @@ def distance(x1,y1):
     
 
 ############EXTRA CREDIT PROBLEMS
+########################
 def problem4():
     creds = int(input("input the number of credits"))
+    #get thte credits in
+
+
+    ###Run through a decision tree from the book
     if creds<7:
         print("Freshman")
     elif creds < 16:
@@ -195,6 +210,7 @@ def problem4():
         print("senior")
 def problem5():
     weight = int(input("Enter your weight"))
+    #Get the weight and height
     height = int(input("Enter your height"))
     bmi = weight * (720/(height**2))
     if 19 <= bmi and bmi<=25:
@@ -233,15 +249,16 @@ def problem10():
     d = (19 * a +24)%30
     e = (2*b + 4*c + 6*d +5)%7
 
+    ###The exception years
     exceptionYears = [1954,1981,2049,2076]
-    
+    ##If the year is an exception year, use the exception formula
     if year in exceptionYears:
         if 22 + d + e -7 <= 31:
             print("Easter is on March "+str(22+d+e-7))
             return
         print("Easter is on April "+str(-9+d+e-7))
         return
-    
+    ###The other formula
     if 22 + d + e <= 31:
         print("Easter is on March "+str(22+d+e))
         return
