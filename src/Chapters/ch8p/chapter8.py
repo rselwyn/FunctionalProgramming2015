@@ -76,7 +76,7 @@ def problem9():
         if newData == "":
             break
         data.append(newData)
-        ##ADD The fata to the list of data
+        ##ADD The data to the list of data
         
     for i in range(len(data)):
         print("Leg 1 MPG", float(data[i].split()[0])/float(data[i].split()[1]))
