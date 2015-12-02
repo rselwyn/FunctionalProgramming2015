@@ -51,7 +51,7 @@ def problem8():
     ##P8
     dealerCardCount = 0
     hasAce = False
-    while (dealerCardCount<17 and hasAce==False) or (dealerCardCount<7 and hasAce):
+    while (dealerCardCount<17 and hasAce==False) or (dealerCardCount<7 and hasAce) or (dealerCardCount<17 and hasAce==True):
         num = chooseCard()
         if num == 14:
             hasAce=True
@@ -60,10 +60,16 @@ def problem8():
             dealerCardCount += num
     if dealerCardCount>21:
         print("BUST")
-        return
+        return True
     print("ALL GOOD")
+    return False
             
-
+def testProblemEight():
+    bustPercent = 0
+    for i in range(1000):
+        if problem8():
+            bustPercent+=1
+    print(bustPercent/1000)
 def chooseCard():
     import math
     number = 0
