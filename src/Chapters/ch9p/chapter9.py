@@ -1,5 +1,6 @@
 ##Ch 9 PE: 3, 4, 7, 8, 11, 12 (DUE: 12/9)
 
+from random import random
 
 ###############PROBLEM 3
 def problem3():
@@ -23,7 +24,6 @@ def getInputs():
     n = int(input("Number of games to simulate"))
     return a,b,n
 def simulate(a,b):
-    from random import random
     number = random()
     if number<a:
         return True
@@ -46,3 +46,35 @@ def whoWon(scorea,scoreb):
 #######END PROBLEM 3
 
 
+
+def problem8():
+    ##P8
+    dealerCardCount = 0
+    hasAce = False
+    while (dealerCardCount<17 and hasAce==False) or (dealerCardCount<7 and hasAce):
+        num = chooseCard()
+        if num == 14:
+            hasAce=True
+            dealerCardCount+=1
+        else:
+            dealerCardCount += num
+    if dealerCardCount>21:
+        print("BUST")
+        return
+    print("ALL GOOD")
+            
+
+def chooseCard():
+    import math
+    number = 0
+    while 1>number:
+        number = math.ceil(random()*14)
+    if number>10 and (not number==14) :
+        number = 10
+    if number<=10:
+        return number
+    if number==14:
+        return 14
+    
+    
+    
