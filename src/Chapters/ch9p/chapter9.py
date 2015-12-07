@@ -2,6 +2,64 @@
 ##Ch 9 PE: 3, 4, 7, 8, 11, 12 (DUE: 12/9)
 
 from random import random
+#Import the random module
+
+##########PROBLEM 3
+def problem3():
+    a,b,n = getProblem3Inputs()
+    gamesOneA, gamesOneB = simNGames(a,b,n)
+    if gamesOneA > gamesOneB:
+        print("A")
+        return
+    print("B")
+
+def simNGames(a,b,n):
+    winsa = 0
+    winsb = 0
+    for i in range(n):
+        scoreA, scoreB = simGame(a,b)
+        if scoreA > scoreB:
+            winsa +=1
+        else:
+            winsb +=1
+    return winsa,winsb
+def simGame(pa,pb):
+    serving = "A"
+    scorea = 0
+    scoreb = 0
+    while not someoneHasOneP3(scorea,scoreb):
+        num = random()
+        if serving == "A":
+            if num < pa:
+                scorea+=1
+            else:
+                serving == "B"
+        else:
+            if num > pa:
+                scoreb +=1
+            else:
+                serving == "A"
+    return scorea,scoreb
+            #...
+            
+        
+def someoneHasOneP3(a,b):
+    return a == 15 or b == 15
+
+def getProblem3Inputs():
+    a = float(input("enter prob for a"))
+    b = 1-a
+    n = int(input("Enter the nubmer of games"))
+    return a,b,n
+
+
+
+
+#######END PROBLEM 3
+
+
+
+
 
 ###############PROBLEM 4
 def problem4():
@@ -31,9 +89,9 @@ def simulate(a,b):
     return False
 
 def someoneHasWon(scorea,scoreb):
-    if scorea>=15 and scorea-scoreb>=2:
+    if scorea>=25 and scorea-scoreb>=2:
         return True
-    if scoreb>=15 and scoreb-scorea>=2:
+    if scoreb>=25 and scoreb-scorea>=2:
         return True
     return False
 
