@@ -65,7 +65,17 @@ def innerProd(x,y):
         num += x[i]*y[i]
     return num
 
+def problem8():
+    somelist = [0,1,2,3,4,2,3,1,2]
+    print(removeDuplicates(somelist))
 
+def removeDuplicates(liste):
+    newList = []
+    for i in liste:
+        if i not in newList:
+            newList.append(i)
+    return newList
+        
 
 
 
