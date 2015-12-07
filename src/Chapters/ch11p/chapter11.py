@@ -50,3 +50,22 @@ def isin(myList,lookFor):
         if i == lookFor:
             return True
     return False
+
+
+
+def problem6():
+    return
+
+def problem7():
+    print(innerProd([1,2,3],[3,2,1]))
+    
+def innerProd(x,y):
+    num = 0
+    for i in range(len(x)):
+        num += x[i]*y[i]
+    return num
+
+
+
+
+
