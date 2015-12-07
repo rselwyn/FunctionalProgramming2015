@@ -172,3 +172,35 @@ def chooseCard():
         return 14
     
 #####END PROBLEM 8
+
+
+#####PROBLEM11
+def problem11():
+    iterations = 1000000
+    fiveInARow = 0
+    for i in range(iterations):
+        if runOnce():
+            fiveInARow +=1
+    print(fiveInARow/iterations)
+
+def rollP11():
+    
+    import math
+    number = math.ceil(random()*6)
+    return number
+
+def runOnce():
+    nums = []
+    for i in range(6):
+        nums.append(rollP11())
+ #       print(nums[i])
+        if (i != 0):
+            if nums[i] == nums[i-1]:
+                continue
+            return False
+    return True
+            
+            
+
+
+###END PROBLEM 11
