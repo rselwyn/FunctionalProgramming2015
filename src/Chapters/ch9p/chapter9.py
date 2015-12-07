@@ -1,9 +1,10 @@
+#!/usr/bin/env python
 ##Ch 9 PE: 3, 4, 7, 8, 11, 12 (DUE: 12/9)
 
 from random import random
 
-###############PROBLEM 3
-def problem3():
+###############PROBLEM 4
+def problem4():
     scorea = 0
     scoreb = 0
     a,b,n = getInputs()
@@ -43,10 +44,40 @@ def whoWon(scorea,scoreb):
     print("B")
 
 
-#######END PROBLEM 3
+#######END PROBLEM 4
+
+
+########PROBLEM 7
+def problem7():
+    iterations = 0
+    wins = 0
+    losses = 0
+    for i in range(iterations):
+        if playgame():
+            wins+=1
+        else:
+            losses+=1
+            
+        
+        
+def playGame():
+    roll = roll()
+def roll():
+    number = math.ceil(random()*12)
+    while number<2:
+        number = math.ceil(random()*12)
+    return number
 
 
 
+
+
+#####END PROBLEM 7
+
+
+
+
+########PROBLEM 8
 def problem8():
     ##P8
     dealerCardCount = 0
@@ -82,5 +113,4 @@ def chooseCard():
     if number==14:
         return 14
     
-    
-    
+#####END PROBLEM 8
