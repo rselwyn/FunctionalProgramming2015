@@ -200,7 +200,37 @@ def runOnce():
             return False
     return True
             
-            
-
+        
 
 ###END PROBLEM 11
+
+
+####PROBLEM 12
+def problem12():
+    iters = 100
+    num = 0
+    for i in range(iters):
+        num += runOnce12()
+    print(num/iters, end="")
+    print(" is the average steps among 100 iterations of 1000 step walks (1mil iters total)")
+        
+    
+def runOnce12():
+    n = 1000
+    num = 0
+    for i in range(n):
+        if step():
+            num+=1
+        else:
+            num = num -1
+ #   print(num)
+    return num
+
+def step():
+    if random() > .5:
+        return True
+    return False
+
+
+###End problem 12
+
