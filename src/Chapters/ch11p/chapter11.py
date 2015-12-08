@@ -50,7 +50,18 @@ def isin(myList,lookFor):
         if i == lookFor:
             return True
     return False
-
+from random import *
+def shuffle(arr):
+    #Help from http://code.activestate.com/recipes/360461-fisher-yates-shuffle/ and https://en.wikipedia.org/wiki/Fisher–Yates_shuffle
+    #Implementation of Fisher-Yates shuffle
+    a=len(arr)
+    less=a-1
+    for d in range(less,0,-1):
+      e=randint(0,d)
+      if e == d:
+            continue
+      arr[d],arr[e]=arr[e],arr[d]
+    return arr
 
 
 def problem6():
