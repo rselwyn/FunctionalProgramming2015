@@ -87,6 +87,19 @@ def removeDuplicates(liste):
             newList.append(i)
     return newList
         
+def problem10():
+    n = int(input("Enter the number"))
+    badnums = []
+    primes = []
+    for i in range(2,n+1):
+        if i not in badnums:
+            print(i)
+            primes.append(i)
+            for b in range(i,n+1):
+                if b%i==0:
+                    badnums.append(b)
+    print(primes)
+        
 
 
 
