@@ -5,14 +5,21 @@ from random import random
 #Import the random module
 
 ##########PROBLEM 3
+
+########MOST OF THE CODE WAS TAKEN FROM THE TEXTBOOK; THEREFORE, it doesnt have too many comments
 def problem3():
     a,b,n = getProblem3Inputs()
+    #Get the inputs
+
+    #sim the games
     gamesOneA, gamesOneB = simNGames(a,b,n)
     if gamesOneA > gamesOneB:
-        print("A")
+        #If a has ore wins, they have one
+        print("A " + str(gamesOneA + "were won"))
         return
-    print("B")
+    print("B " + str(gamesOneB + "were won"))
 
+#Run n simulations
 def simNGames(a,b,n):
     winsa = 0
     winsb = 0
@@ -22,11 +29,14 @@ def simNGames(a,b,n):
             winsa +=1
         else:
             winsb +=1
+    #returns num of wins each
     return winsa,winsb
 def simGame(pa,pb):
+    ##One simulation - p(a) and p(b) are inputs
     serving = "A"
     scorea = 0
     scoreb = 0
+    #While someone hasnt won, simulate
     while not someoneHasOneP3(scorea,scoreb):
         num = random()
         if serving == "A":
@@ -62,6 +72,9 @@ def getProblem3Inputs():
 
 
 ###############PROBLEM 4
+
+########MOST OF THE CODE WAS TAKEN FROM THE TEXTBOOK; THEREFORE, it doesnt have too many comments
+#####SEE PROBLEM 3 for documentation.  This problem is very similar
 def problem4():
     scorea = 0
     scoreb = 0
