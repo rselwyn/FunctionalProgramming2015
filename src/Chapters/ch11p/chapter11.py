@@ -101,5 +101,21 @@ def problem10():
     print(primes)
         
 
-
-
+def problem11():
+    fileLoc = "problem11.txt"
+    totalWords = []
+    with open(fileLoc,'r') as f:
+        for line in f:
+            for word in line.split():
+                if word.lower() in swearWords:
+                    print ("****")
+                    totalWords.append("****")
+                else:
+                    print(word)
+                    totalWords.append(word)
+        f.close()
+    with open(fileLoc, 'w') as f:
+        for words in totalWords:
+            f.write(words+" ")
+        f.close()
+            
