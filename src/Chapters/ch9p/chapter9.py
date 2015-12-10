@@ -153,8 +153,13 @@ def problem8():
     ##P8
     dealerCardCount = 0
     hasAce = False
+    #He doesnt have an ae
+
+    #While the dealer should still draw
     while (dealerCardCount<17 and hasAce==False) or (dealerCardCount<7 and hasAce) or (dealerCardCount<17 and hasAce==True):
         num = chooseCard()
+        #Choose a card
+        #If it an ace, set the value
         if num == 14:
             hasAce=True
             dealerCardCount+=1
@@ -165,23 +170,30 @@ def problem8():
         return True
     print("ALL GOOD")
     return False
-            
+
+##WHAT YOU CAN USE TO TEST PROBLEM 8
 def testProblemEight():
     bustPercent = 0
     for i in range(1000):
         if problem8():
             bustPercent+=1
     print(bustPercent/1000)
+
+    #CHOOSE CARD
 def chooseCard():
     import math
     number = 0
+    #CHOOSE A NUMBER
     while 1>number:
         number = math.ceil(random()*14)
     if number>10 and (not number==14) :
+        #IF IT IS A FACE CARD, just return 10
         number = 10
     if number<=10:
+        #If regular, just return num
         return number
     if number==14:
+        #if ace, return 14
         return 14
     
 #####END PROBLEM 8
@@ -189,25 +201,33 @@ def chooseCard():
 
 #####PROBLEM11
 def problem11():
+    #Run 1mil iterations
     iterations = 1000000
+    #count of 5 in a rows
     fiveInARow = 0
+    #run iteration times
     for i in range(iterations):
+        #if it rolls a five in a row
         if runOnce():
+            #add to the number
             fiveInARow +=1
-    print(fiveInARow/iterations)
+    print("THE probability is"+ str(fiveInARow/iterations))
 
 def rollP11():
-    
+    #one roll
     import math
+    #will return a 1-6
     number = math.ceil(random()*6)
     return number
 
 def runOnce():
     nums = []
+    #numbers
     for i in range(6):
         nums.append(rollP11())
- #       print(nums[i])
+        #add to the array
         if (i != 0):
+            #If the num is equal to thre previous one, keep adding
             if nums[i] == nums[i-1]:
                 continue
             return False
@@ -221,25 +241,34 @@ def runOnce():
 ####PROBLEM 12
 def problem12():
     iters = 100
+    #A hundred iterations
     num = 0
+    #nums is the total steps
     for i in range(iters):
         num += runOnce12()
     print(num/iters, end="")
+    #Calculate the average ^^^^
+    #Print the rest of the message below
     print(" is the average steps among 100 iterations of 1000 step walks (1mil iters total)")
         
     
 def runOnce12():
     n = 1000
+    #^^ One thousands steps
     num = 0
+    #Current Steps ^^
     for i in range(n):
+        #If step is true, go forward 1
         if step():
             num+=1
+        #Else go back one
         else:
             num = num -1
  #   print(num)
     return num
 
 def step():
+    #Return steps as boolean
     if random() > .5:
         return True
     return False
