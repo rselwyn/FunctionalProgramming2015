@@ -5,7 +5,7 @@ def problem1():
     #get the date
     day, month,year = eval(input("Enter the day, month, and year seperated by commas"))
     #use string formatting to put together the easy format
-    date1 = "{}/{}/{}".format(str(month), str(day), str(year))
+    date1 = "{0}/{1}/{2}".format(str(month), str(day), str(year))
 
     months = ["January","February","March","April","May","June","July","August","September","October", "November", "December"]
     #catalog all the months for reference
@@ -13,7 +13,7 @@ def problem1():
     #use the cataloged array to get the string format of the month number
     strMonth = months[month-1]
 
-    date2 = "{} {}, {}".format(strMonth,str(day),str(year))
+    date2 = "{0} {1}, {2}".format(strMonth,str(day),str(year))
     #format into a string
 
     #print it
